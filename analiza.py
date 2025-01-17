@@ -80,7 +80,7 @@ def main():
         count = int(input("Podaj liczbę pakietów do przechwycenia: "))
         sniff_packets(timeout=timeout, count=count)
     elif choice == "3":
-        target_ip = input("Podaj IP hosta do skanowania (np. 192.168.100.28): ")
+        target_ip = input("Podaj IP hosta do skanowania (np. 192.168.1.1): ")
         if check_host_availability(target_ip):  # Sprawdzamy dostępność hosta
             target_ports = list(map(int, input("Podaj porty do skanowania (oddzielone przecinkiem): ").split(',')))
             open_ports = scan_ports(target_ip, target_ports)
